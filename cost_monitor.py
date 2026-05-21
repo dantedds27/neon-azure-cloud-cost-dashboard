@@ -1,6 +1,6 @@
 from azure.identity import AzureCliCredential
 from azure.mgmt.costmanagement import CostManagementClient
-from datetime import datetime, timedelta, timezone
+from datetime import datetime, timedelta
 import sys
 
 if sys.version_info[0] < 3:
@@ -26,7 +26,7 @@ ICON_CLOUD = "\U00002601"
 ICON_BOLT  = "\U000026A1"
 
 # Your Azure subscription ID
-SUB_ID = "5c0a4f6a-818f-4a50-9b90-45b304ee468d"
+SUB_ID = "your-subscription-id-here"  # <-- Change this to your actual subscription ID
 
 # Alert threshold in USD - change this to whatever you want
 LIMIT= 50.0
@@ -38,7 +38,7 @@ def print_header():
     print(f"\n{BOLD}{CYAN}{'='*55}{RESET}")
     print(f"{BOLD}{CYAN}Azure Cost Management Dashboard{RESET}  {DIM}|{RESET}  {YELLOW}{now}{RESET}")
     print(f"{BOLD}{CYAN}{'='*55}{RESET}")
-    print(f"   {NEON}{ICON_BOLT}  Sub    :{RESET} {WHITE}{SUB_ID}{RESET}")
+    print(f"   {NEON}{ICON_BOLT}  Sub   :{RESET} {WHITE}{SUB_ID}{RESET}")
     print(f"   {NEON}{ICON_MONEY} Limit  :{RESET} {WHITE}${LIMIT:.2f}{RESET}\n")
 
  # Retrieves Azure credentials using Azure CLI and initializes the Cost Management client
