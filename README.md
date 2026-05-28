@@ -18,18 +18,27 @@ This Python script connects to **Azure Cost Management** using the **Azure CLI c
 Built as part of my Azure cloud engineering portfolio 
 while studying for Microsoft Azure certifications.
 
+## Features
+- Fetches real Azure cost data via Cost Management API
+- Neon hacker-style colour-coded terminal output
+- Spending threshold alert system
+- Saves a timestamped cost report to a .txt file
+- Breakdown by service name
+
 ## Certifications
 - Microsoft AZ-900 Azure Fundamentals ✅
 
 ## Tech Stack
 - Python 3
-- Azure SDK (azure-identity, azure-mgmt-resource)
+- Azure SDK (azure-identity, azure-mgmt-costmanagement)
 - Azure CLI
+- python-dotenv for secure credential management
 
 ## Setup
-pip3 install azure-identity azure-mgmt-resource
+pip3 install azure-identity azure-mgmt-costmanagement python-dotenv
 az login
-python3 dashboard.py
+Create a .env file with your SUB_ID and LIMIT values
+python3 cost_monitor.py
 
 ## Author
 Dante | Aspiring Azure Cloud Engineer
