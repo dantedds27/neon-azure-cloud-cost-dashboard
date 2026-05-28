@@ -13,3 +13,23 @@ This Python script connects to **Azure Cost Management** using the **Azure CLI c
 1. Authenticates via `AzureCliCredential` — ensure you’ve logged in with:
    ```bash
    az login
+
+## About
+Built as part of my Azure cloud engineering portfolio 
+while studying for Microsoft Azure certifications.
+
+## Certifications
+- Microsoft AZ-900 Azure Fundamentals ✅
+
+## Tech Stack
+- Python 3
+- Azure SDK (azure-identity, azure-mgmt-resource)
+- Azure CLI
+
+## Setup
+pip3 install azure-identity azure-mgmt-resource
+az login
+python3 dashboard.py
+
+## Author
+Dante | Aspiring Azure Cloud Engineer
